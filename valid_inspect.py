@@ -24,19 +24,36 @@ with open('nlpedia-db.csv', 'r', encoding='UTF-8') as f:
             if url != "None":
                 dir = row[0] + "_" + row[1] + "_" + row[2] + "_Get"
                 work_path = root_path+"/"+dir
-                if not os.listdir(work_path):
-                    data["validation"].append("None")
-                    dir = row[0] + "_" + row[1] + "_" + row[2] + "_None"
-                    data["directory"].append(dir)
-                    data["pdfName"].append("NaN")
+                try:
+                    if not os.listdir(work_path):
+                        data["validation"].append("None")
+                        dir = row[0] + "_" + row[1] + "_" + row[2] + "_None"
+                        data["directory"].append(dir)
+                        data["pdfName"].append("NaN")
 
-                    dst = root_path + "/" + dir
-                    os.rename(work_path, dst)
-                else:
-                    dir = row[0] + "_" + row[1] + "_" + row[2] + "_Get"
-                    data["validation"].append("Get")
-                    data["pdfName"].append(os.listdir(root_path + "/" + dir)[0])
-                    data["directory"].append(dir)
+                        dst = root_path + "/" + dir
+                        os.rename(work_path, dst)
+                    else:
+                        dir = row[0] + "_" + row[1] + "_" + row[2] + "_Get"
+                        data["validation"].append("Get")
+                        data["pdfName"].append(os.listdir(root_path + "/" + dir)[0])
+                        data["directory"].append(dir)
+                except:
+                    dir = row[0] + "_" + row[1] + "_" + row[2] + "_None"
+                    work_path = root_path + "/" + dir
+                    if not os.listdir(work_path):
+                        data["validation"].append("None")
+                        dir = row[0] + "_" + row[1] + "_" + row[2] + "_None"
+                        data["directory"].append(dir)
+                        data["pdfName"].append("NaN")
+
+                        dst = root_path + "/" + dir
+                        os.rename(work_path, dst)
+                    else:
+                        dir = row[0] + "_" + row[1] + "_" + row[2] + "_Get"
+                        data["validation"].append("Get")
+                        data["pdfName"].append(os.listdir(root_path + "/" + dir)[0])
+                        data["directory"].append(dir)
 
 
             else:
