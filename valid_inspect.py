@@ -16,11 +16,9 @@ with open('nlpedia-db.csv', 'r', encoding='UTF-8') as f:
     idx = 0
 
     for row in reader:
-
-        data["id"].append(row[0])
-
         idx+=1
         if idx>1:
+            data["id"].append(row[0])
             url0 = row[7]
             url = url0.split(" ")[0]
             if url != "None":
