@@ -1,7 +1,19 @@
 import os
 
-print(os.listdir(os.getcwd())[0])
-# for file in os.listdir(os.getcwd()):
-#     file_path = os.path.join(os.getcwd(), file)
-#     print(file)
-#     print(file_path)
+
+# with open('pdf_process.txt', 'r', encoding='UTF-8') as f:
+#     line = f.readline()
+#     idx = 0
+#     while line:
+#         idx+=1
+#         print(line,end="")
+#         fix = idx//2000 + 1
+#         with open('pdf_process' + "_" + str(fix) + ".sh", 'a+', encoding='UTF-8') as f1:
+#             f1.write(line)
+#         line = f.readline()
+
+with open('pdf_process_set.sh', 'w', encoding='UTF-8') as f:
+    for i in range(23):
+        f.write("chmod +x " + "./pdf_process_" + str(i+1) + ".sh" + "\n")
+    for i in range(23):
+        f.write("nohup " + "./pdf_process_" + str(i+1) + ".sh " + " > log" + str(i+1) + ".file" + " 2>&1 &" + "\n")
