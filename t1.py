@@ -10,5 +10,3 @@ with open("valid_inspect.txt", 'w', encoding='UTF-8') as f:
                 for file in files1:
                     f.write(file + ":" + os.path.getsize(dir+"/"+file)+" ")
             f.write("\n")
-
-
