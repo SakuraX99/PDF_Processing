@@ -12,5 +12,7 @@ with open("valid_inspect.txt", 'w', encoding='UTF-8') as f:
             f.write(dir + " ")
             for root1, dirs1, files1 in os.walk(dir):
                 for file in files1:
-                    f.write(file + ":" + str(os.path.getsize("/usr2/home/pliu3/PDF_Processing/"+ dir+"/"+file))+" ")
+                    f.write(file)
             f.write("\n")
+
+##  + ":" + str(os.path.getsize("/usr2/home/pliu3/PDF_Processing/"+ dir+"/"+file))+" "
