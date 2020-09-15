@@ -17,6 +17,6 @@ with open(filename, 'w') as file_object:
             if idx>1:
                 validation = row[1]
                 if validation!="None":
-                    command = "java -Xmx6g -jar science-parse-cli-assembly-3.0.1.jar " + row[2] + ''' "$1" ''' + "-f " + "./" + row[3] + "/" + row[0] + "_parse.json"
+                    command = "java -Xmx6g -jar science-parse-cli-assembly-3.0.1.jar /usr2/home/pliu3/PDF_Processing/" + row[2] + ''' "$1" ''' + "-f " + "/usr2/home/pliu3/PDF_Processing/" + row[3] + "/" + row[0] + "_parse.json"
                     file_object.write(command + "\n")
 
