@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b31fd974-93c8-435c-8dcc-12620e4b792d" name="GPU1" url="http://lor.lti.cs.cmu.edu">
+        <fileTransfer rootFolder="/usr2/home/pliu3" accessType="SFTP" host="lor.lti.cs.cmu.edu" port="22" sshConfigId="5d059fa7-1dd9-49b1-99e6-fb7d5c806a07" sshConfig="pliu3@lor.lti.cs.cmu.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

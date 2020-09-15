@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="lor.lti.cs.cmu.edu" id="5d059fa7-1dd9-49b1-99e6-fb7d5c806a07" port="22" nameFormat="DESCRIPTIVE" username="pliu3" />
+    </configs>
+  </component>
+</project>
