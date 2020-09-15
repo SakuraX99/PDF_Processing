@@ -7,6 +7,8 @@ with open("valid_inspect.txt", 'w', encoding='UTF-8') as f:
         for dir in dirs:
             if dir==".git":
                 continue
+            if dir == ".idea":
+                continue
             f.write(dir + " ")
             for root1, dirs1, files1 in os.walk(dir):
                 for file in files1:
